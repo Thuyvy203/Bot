@@ -1,0 +1,39 @@
+{
+    "Language": "vi",
+    "PreKey": "",
+    "AutoUpdate": true,
+    "MainColor": "#9900FF",
+    "MainName": "Văn Toàn",
+    "Uptime": true,
+    "Login2Fa": true,
+    "AutoLogin": false,
+    "BroadCast": true,
+    "EncryptFeature": true,
+    "ResetDataLogin": true,
+    "AutoRestartMinutes": 0,
+    "HTML": {
+        "HTML": false,
+        "UserName": "Văn Toàn",
+        "MusicLink": ""
+    },
+    "AuthString": "R3AY SON6 P73D YFJ5 WVYQ MUDT BP4I MNHU | https://i.imgur.com/5TSR3kE.jpeg Please remove this !, Recommend If You Use getUserInfoV2",
+    "Config": "default",
+    "AntiSendAppState": true,
+    "DevMode": false,
+    "AutoInstallNode": false,
+    "RestartMQTT_Minutes": 0,
+    "Stable_Version": {
+        "Accept": false,
+        "Version": ""
+    },
+    "AntiGetInfo": {
+        "Database_Type": "default",
+        "AntiGetThreadInfo": true,
+        "AntiGetUserInfo": true
+    },
+    "Websocket_Extension": {
+        "Status": true,
+        "ResetData": false,
+        "AppState_Path": "appstate.json"
+    }
+}
