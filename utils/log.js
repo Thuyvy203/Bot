@@ -1,42 +1,36 @@
 const chalk = require('chalk');
+function randomColor() {
+    var color = "";
+    for (var i = 0; i < 3; i++) {
+        var sub = Math.floor(Math.random() * 256).toString(16);
+        color += (sub.length == 1 ? "0" + sub : sub);
+    } 
+   return "#" + color;
+};
 module.exports = (data, option) => {
-	const arrayColor = ['blue', 'yellow', 'green', 'red', 'magenta', 'yellowBright', 'blueBright', 'magentaBright']
-	const color_one = chalk[arrayColor[Math.floor(Math.random() * arrayColor.length)]]
-	const color_two = chalk[arrayColor[Math.floor(Math.random() * arrayColor.length)]]
-	switch (option) {
-		case "warn":
-			console.log(chalk.green('[ 𝐅𝐚𝐢𝐥 ] » ') + data);
-			break;
-		case "error":
-			console.log(chalk.blue('[ 𝐅𝐚𝐢𝐥 ] » ') + data);
-			break;
-		case "load":
-			console.log(color_one('[ 𝐅𝐚𝐜𝐞𝐡𝐨𝐨𝐤 𝐔𝐬𝐞𝐫 𝐍𝐞𝐰 ]') + color_two(data));
-			break;
-		default:
-			console.log(color_one(`${option} » `) + color_two(data));
-			break;
-	}
+  switch (option) {
+    case "warn":
+        console.log(chalk.bold.hex("#ff0000").bold('» Lỗi « ') + data);
+      break;
+    case "error":
+      console.log(chalk.bold.hex("#ff0000").bold('» Lỗi « ') + data);
+      break;
+    default:
+        console.log(chalk.bold.hex(randomColor()).bold(`${option} ➟ `) + data);
+      break;
+  }
 }
 
 module.exports.loader = (data, option) => {
-	const arrayColor = ['blue', 'yellow', 'green', 'red', 'magenta', 'yellowBright', 'blueBright', 'magentaBright']
-	const color_one = chalk[arrayColor[Math.floor(Math.random() * arrayColor.length)]]
-	const color_two = chalk[arrayColor[Math.floor(Math.random() * arrayColor.length)]]
-	switch (option) {
-		case "warn":
-			console.log(chalk.greenBright('[  𝐍𝐠𝐨 𝐓𝐫𝐮𝐧𝐠 𝐊𝐢𝐞𝐧 ] » ') + data);
-			break;
-		case "error":
-			console.log(chalk.greenBright('[ 𝐍𝐠𝐨 𝐓𝐫𝐮𝐧𝐠 𝐊𝐢𝐞𝐧 ] » ') + data);
-			break;
-		default:
-			console.log(color_one(`[ 𝐍𝐠𝐨 𝐓𝐫𝐮𝐧𝐠 𝐊𝐢𝐞𝐧 ] » `) + color_two(data));
-			break;
-	}
+  switch (option) {
+    case "warn":
+      console.log(chalk.bold.hex(randomColor()).bold("〈 Nino 〉") + chalk.bold.hex("#8B8878").bold(data))
+      break;
+    case "error":
+    console.log(chalk.bold.hex(randomColor()).bold("〈 Nino 〉") + data);
+      break;
+    default:
+      console.log(chalk.bold.hex(randomColor()).bold("〈 Nino 〉") + chalk.bold.hex(randomColor()).bold(data));
+      break;
+  }
 }
-module.exports.banner = (data) => {
-	const rdcl = ['blue', 'yellow', 'green', 'red', 'magenta', 'yellowBright', 'blueBright', 'magentaBright']
-	const color = chalk[rdcl[Math.floor(Math.random() * rdcl.length)]]
-	console.log(color(data));
-        }

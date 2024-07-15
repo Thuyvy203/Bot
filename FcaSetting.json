@@ -11,7 +11,7 @@
 	"AuthString": " | https://i.imgur.com/RAg3rvw.png Please remove this !, Recommend If You Using getUserInfoV2",
 	"EncryptFeature": true,
 	"ResetDataLogin": false,
-	"AutoRestartMinutes": 360,
+	"AutoRestartMinutes": 0,
 	"HTML": {},
 	"AntiSendAppState": true,
 	"DevMode": false,
